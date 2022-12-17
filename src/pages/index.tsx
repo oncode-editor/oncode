@@ -172,7 +172,7 @@ const HomePage: NextPage = () => {
               port forwarding or share a snapshot as a copy of your workspace
               with teammates.
             </p>
-            <button className='bg-blue-600 text-white px-12 py-5 rounded-xl text-lg font-semibold'>
+            <button className='bg-blue-600 text-white px-12 py-5 rounded-[3em] text-lg font-semibold'>
               Get started
             </button>
           </div>
