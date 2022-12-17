@@ -15,15 +15,23 @@ const HomePage: NextPage = () => {
   }[] = [
     {
       name: "Docs",
-      href: "#"
+      href: "/docs"
     },
     {
       name: "Blog",
-      href: "#"
+      href: "/blog"
     },
     {
       name: "Features",
-      href: "#"
+      href: "/features"
+    },
+    {
+      name: "Sponsors",
+      href: "/sponsors"
+    },
+    {
+      name: "About",
+      href: "/about"
     }
   ];
   return (
@@ -94,7 +102,7 @@ const HomePage: NextPage = () => {
                   <Image src={github} alt='GitHub' />
                 </div>
                 <div>
-                  <Link href='/login' className='cursor-pointer text-sm'>
+                  <Link href='/signup' className='cursor-pointer text-sm'>
                     Sign in
                   </Link>
                 </div>
@@ -108,9 +116,11 @@ const HomePage: NextPage = () => {
                 Super Fast, automated cloud development environments for
                 collaboration,no setup, in seconds.
               </p>
-              <button className='bg-white p-4 px-12 text-xl rounded-[3em]'>
-                <Link href={"/login"}>Get started</Link>
-              </button>
+              <Link href={"/signup"}>
+                <button className='bg-white p-4 px-12 text-xl rounded-[3em]'>
+                  Get started
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -172,9 +182,11 @@ const HomePage: NextPage = () => {
               port forwarding or share a snapshot as a copy of your workspace
               with teammates.
             </p>
-            <button className='bg-blue-600 text-white px-12 py-5 rounded-[3em] text-lg font-semibold'>
-              Get started
-            </button>
+            <Link href={"/signup"}>
+              <button className='bg-blue-btn p-4 px-12 text-xl rounded-[3em] text-white'>
+                Get started
+              </button>
+            </Link>
           </div>
         </div>
       </div>
