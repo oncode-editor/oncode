@@ -24,21 +24,21 @@ const Signup: NextPage = () => {
             <p className='text-lg text-gray-600'>
               Start with your favorite git client
             </p>
-            <div className='flex flex-col gap-2 w-4/5'>
-              <button className='bg-gray-300 py-1 rounded-lg flex items-center justify-center gap-2'>
-                <GitHub />
+            <div className='flex flex-col gap-3 w-4/5'>
+              <button className='bg-gray-300 py-2 rounded-lg flex items-center px-10 gap-2'>
+                <GitHub width={"37"} height={"37"} />
                 <span>Continue with GitHub</span>
               </button>
-              <button className='bg-indigo-600 py-4 rounded-lg'>
-                <GitLab />
+              <button className='bg-indigo-600 py-2 rounded-lg flex items-center px-10 gap-2'>
+                <GitLab width='37' height='37' />
                 <span className='text-white'>Continue with GitLab</span>
               </button>
-              <button className='bg-blue-600 py-4 rounded-lg'>
-                <GitBucket />
+              <button className='bg-blue-600 py-2 rounded-lg flex items-center px-10 gap-2'>
+                <GitBucket width='37' height='37' />
                 <span className='text-white'>Continue with BitBucket</span>
               </button>
             </div>
-            <div></div>
+            <p className='absolute bottom-5'>@oncode 2022</p>
           </div>
         </div>
         <div className='w-3/5 h-full'></div>

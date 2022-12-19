@@ -1,9 +1,14 @@
-export const GitHub = () => (
+import { NextComponentType, NextPage } from "next";
+
+export const GitHub: NextPage<{
+  width: string;
+  height: string;
+}> = ({ height, width }) => (
   <svg
-    width='60'
-    height='59'
     viewBox='0 0 60 59'
     fill='none'
+    width={width}
+    height={height}
     xmlns='http://www.w3.org/2000/svg'
   >
     <path
@@ -15,11 +20,14 @@ export const GitHub = () => (
   </svg>
 );
 
-export const GitLab = () => (
+export const GitLab: NextPage<{
+  width: string;
+  height: string;
+}> = ({ width, height }) => (
   <svg
-    width='60'
-    height='58'
-    viewBox='0 0 60 58'
+    width={width}
+    height={height}
+    viewBox='0 0 60 59'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
   >
@@ -30,11 +38,14 @@ export const GitLab = () => (
   </svg>
 );
 
-export const GitBucket = () => (
+export const GitBucket: NextPage<{
+  width: string;
+  height: string;
+}> = ({ width, height }) => (
   <svg
-    width='60'
-    height='54'
-    viewBox='0 0 60 54'
+    width={width}
+    height={height}
+    viewBox='0 0 60 59'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
   >
