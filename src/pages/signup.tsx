@@ -3,15 +3,24 @@ import Head from "next/head";
 import Image from "next/image";
 import { GitBucket, GitHub, GitLab } from "../common/components/icons/Icons";
 import logo from "/public/favicon/logo.svg";
+import logo1 from "/public/favicon/favicon.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Signup: NextPage = () => {
+  const displayText = [
+    "Always ready",
+    "Automated development setup",
+    "Continues project prebuild",
+    "Team collaboration"
+  ];
   return (
     <>
       <Head>
         <title>OnCode - Join The Community Of Online Coders</title>
       </Head>
       <div className='h-screen w-screen overflow-x-hidden flex'>
-        <div className='w-2/5 h-full px-24 pt-24 flex flex-col gap-10'>
+        <div className='w-2/6 h-full px-16 pt-24 flex flex-col gap-10'>
           <div className='flex items-center gap-4'>
             <h1 className='text-4xl font-normal'>Welcome to</h1>
             <Image src={logo} alt='logo' />
@@ -41,7 +50,38 @@ const Signup: NextPage = () => {
             <p className='absolute bottom-5'>@oncode 2022</p>
           </div>
         </div>
-        <div className='w-3/5 h-full'></div>
+        <div className='w-4/6 h-full bg-blue-50'>
+          <div className='h-[15em] w-full flex flex-wrap overflow-hidden gap-[2px]'>
+            {Array(100)
+              .fill(1)
+              .map((num, index) => (
+                <div
+                  key={index}
+                  className='border w-16 h-14'
+                  draggable={false}
+                ></div>
+              ))}
+          </div>
+          <div className='px-14 py-4 flex flex-col gap-3'>
+            <div>
+              <Image src={logo1} alt='logo' />
+            </div>
+            <h1 className='text-4xl font-medium w-1/2 text-blue-600'>
+              Ready to Code Every time, Everywhere
+            </h1>
+            <div className='py-4 flex flex-col gap-3'>
+              {displayText.map((text) => (
+                <span key={text} className='flex gap-3 items-center'>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className='text-green-500 text-3xl'
+                  />
+                  <p className='text-2xl'> {text}</p>
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
